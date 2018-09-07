@@ -1,6 +1,6 @@
 package com.lijingyao.stateMachine;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.statemachine.StateMachine;
@@ -11,7 +11,7 @@ import org.springframework.statemachine.StateMachine;
 @Configuration
 public class OrderPersistHandlerConfig {
 
-    @Autowired
+    @Resource
     private StateMachine<OrderStatus, OrderStatusChangeEvent> stateMachine;
 
 
